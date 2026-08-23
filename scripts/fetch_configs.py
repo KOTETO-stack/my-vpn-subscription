@@ -131,7 +131,6 @@ async def main():
 
         print(f"Valid secure: {len(servers)}")
 
-        # Check alive
         await asyncio.gather(*[check(session, s) for s in servers])
         alive = [s for s in servers if s.alive]
         print(f"Alive: {len(alive)}")
