@@ -8,6 +8,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       
@@ -19,12 +21,9 @@ jobs:
       
       - run: python scripts/fetch_configs.py
       
-      - name: Upload configs
-        uses: actions/upload-artifact@v4
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: vpn-configs
-          path: |
-            configs.txt
-            info.json
-          retention-days: 90
+          commit_message: "Auto-update VPN configs"
+          file_pattern: "configs.txt info.json"
 
