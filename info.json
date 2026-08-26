@@ -1,10 +1,9 @@
 {
-  "updated_at": "2026-08-26T12:25:55.246728",
+  "updated_at": "2026-08-26T19:30:30.001144",
   "total": 50,
   "protocols": {
-    "trojan": 49,
-    "vless": 1
+    "trojan": 50
   },
-  "avg_ping": 44.4,
-  "avg_score": 60.2
+  "avg_ping": 18.2,
+  "avg_score": 60.0
 }
